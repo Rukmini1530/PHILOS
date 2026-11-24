@@ -1,0 +1,38 @@
+# Environment files (example templates remain trackable)
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.Python
+.venv/
+venv/
+env/
+ENV/
+
+# JavaScript
+node_modules/
+
+# Build and distribution output
+build/
+dist/
+
+# Temporary files and logs
+tmp/
+temp/
+*.tmp
+*.log
+logs/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db

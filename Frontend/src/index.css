@@ -1,0 +1,277 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+    --popover: 224 71% 4%;
+    --popover-foreground: 213 31% 91%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+    --ring: 224.3 76.3% 48%;
+    --radius: 0.5rem;
+
+    /* AstroPixel Space Theme Colors */
+    --astro-nebula-purple: #7c3aed;
+    --astro-nebula-pink: #ec4899;
+    --astro-cosmic-blue: #3b82f6;
+    --astro-starlight: #fbbf24;
+    --astro-void-black: #030712;
+    --astro-deep-space: #0f172a;
+
+    /* Celestial Accent Colors */
+    --astro-supernova: #f97316;
+    --astro-aurora-green: #22c55e;
+    --astro-plasma-cyan: #06b6d4;
+    --astro-red-giant: #ef4444;
+    --astro-white-dwarf: #f8fafc;
+
+    /* UI Elements */
+    --astro-panel-glass: rgba(15, 23, 42, 0.85);
+    --astro-border-glow: rgba(124, 58, 237, 0.3);
+    --astro-highlight: #a78bfa;
+  }
+}
+
+html, body, #root {
+  height: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 100% !important;
+  min-width: 100% !important;
+}
+
+/* Force full height layout */
+html {
+  height: 100% !important;
+  min-height: 100% !important;
+}
+
+body {
+  height: 100% !important;
+  min-height: 100% !important;
+}
+
+#root {
+  height: 100% !important;
+  min-height: 100% !important;
+  display: block !important;
+}
+
+/* AstroPixel Landing Page Styles */
+@layer components {
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+  }
+
+  .glass-panel-hover:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-button {
+    background: linear-gradient(135deg, #3b82f6 0%, #7c3aed 100%);
+    transition: all 0.3s ease;
+  }
+
+  .gradient-button:hover {
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+    box-shadow: 0 0 30px rgba(124, 58, 237, 0.5);
+    transform: scale(1.05);
+  }
+
+  .nebula-glow {
+    box-shadow: 0 0 60px rgba(124, 58, 237, 0.3);
+  }
+
+  .star-twinkle {
+    animation: twinkle 3s ease-in-out infinite;
+  }
+
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(124, 58, 237, 0.6);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* OpenSeadragon custom styles */
+.openseadragon-container {
+  background-color: #0a0a0f !important;
+}
+
+.openseadragon-canvas:focus {
+  outline: none;
+}
+
+/* Loading skeleton */
+.skeleton {
+  @apply animate-pulse bg-muted rounded;
+}
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-gray-800 rounded;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 rounded hover:bg-gray-500;
+}
+
+/* Range slider styles */
+input[type="range"].slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  @apply bg-gray-700 rounded-lg;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="range"].slider::-webkit-slider-track {
+  @apply bg-gray-700 rounded-lg;
+  height: 8px;
+  border: 1px solid #374151;
+}
+
+input[type="range"].slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  @apply bg-blue-500 rounded-full cursor-pointer;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #1e40af;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+
+input[type="range"].slider::-webkit-slider-thumb:hover {
+  @apply bg-blue-400;
+  transform: scale(1.15);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.5);
+}
+
+input[type="range"].slider::-webkit-slider-thumb:active {
+  @apply bg-blue-600;
+  transform: scale(1.05);
+}
+
+input[type="range"].slider::-moz-range-track {
+  @apply bg-gray-700 rounded-lg;
+  height: 8px;
+  border: 1px solid #374151;
+}
+
+input[type="range"].slider::-moz-range-thumb {
+  @apply bg-blue-500 rounded-full cursor-pointer;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #1e40af;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+
+input[type="range"].slider::-moz-range-thumb:hover {
+  @apply bg-blue-400;
+  transform: scale(1.15);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.5);
+}
+
+input[type="range"].slider::-moz-range-thumb:active {
+  @apply bg-blue-600;
+  transform: scale(1.05);
+}

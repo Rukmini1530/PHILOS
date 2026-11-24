@@ -1,0 +1,13 @@
+import React from "react";
+
+const Button = ({ className, children, ...props }) => {
+  return (
+    <button className={className} {...props}>
+      {children}
+    </button>
+  );
+};
+
+Button.displayName = "Button";
+
+export default Button;

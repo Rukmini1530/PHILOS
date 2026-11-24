@@ -1,0 +1,11 @@
+FROM philos-backend:runtime
+
+# Keep the runtime image's non-root account while installing into its Python
+# environment; the base Dockerfile installs its dependencies as this user too.
+RUN pip install --no-cache-dir pytest
+
+# WORKDIR is inherited from the runtime image: /home/user/app.
+COPY --chown=user:user tests/ ./tests/
+COPY --chown=user:user create_admin.py ./create_admin.py
+
+USER user

@@ -1,0 +1,312 @@
+/**
+ * PHILOS Design Tokens
+ * Centralized design system for PHILOS - Planetary imagery and scientific research workspace
+ * Name: PHILOS
+ * Tagline: Explore beyond the visible.
+ */
+
+@layer base {
+  :root {
+    /* Color Palette - PHILOS Scientific Workspace Identity */
+
+    /* Deep Space Background Colors */
+    --color-bg-void: #030712;
+    --color-bg-deep-space: #080D18;
+    --color-bg-primary: #080D18;
+    --color-bg-secondary: #101827;
+    --color-bg-tertiary: #172235;
+    --color-bg-panel: rgba(16, 24, 39, 0.85);
+    --color-bg-panel-hover: rgba(23, 34, 53, 0.9);
+
+    /* Border Colors */
+    --color-border-default: #263449;
+    --color-border-hover: #3A4F6B;
+    --color-border-subtle: #1E2A3A;
+    --color-border-glow: rgba(101, 217, 255, 0.3);
+
+    /* Accent Colors - Cyan & Icy Blue Highlights */
+    --color-accent-cyan: #65D9FF;
+    --color-accent-cyan-hover: #3BB8E6;
+    --color-accent-cyan-muted: rgba(101, 217, 255, 0.15);
+    --color-accent-icy-blue: #8BE9FD;
+    --color-accent-icy-blue-hover: #65D9FF;
+
+    /* Restrained Violet Accents */
+    --color-accent-violet: #A78BFA;
+    --color-accent-violet-hover: #8B5CF6;
+    --color-accent-violet-muted: rgba(167, 139, 250, 0.12);
+    --color-accent-violet-deep: #7C3AED;
+
+    /* Text Colors */
+    --color-text-primary: #F1F5F9;
+    --color-text-secondary: #94A3B8;
+    --color-text-muted: #64748B;
+    --color-text-on-accent: #030712;
+
+    /* Semantic Colors */
+    --color-success: #22C55E;
+    --color-warning: #F59E0B;
+    --color-error: #EF4444;
+    --color-info: #65D9FF;
+
+    /* Semantic Background Colors */
+    --color-bg-success: rgba(34, 197, 94, 0.1);
+    --color-bg-warning: rgba(245, 158, 11, 0.1);
+    --color-bg-error: rgba(239, 68, 68, 0.1);
+    --color-bg-info: rgba(101, 217, 255, 0.1);
+
+    /* Atmospheric Glow Colors */
+    --color-glow-cyan: rgba(59, 130, 246, 0.18);
+    --color-glow-cyan-strong: rgba(59, 130, 246, 0.25);
+    --color-glow-violet: rgba(124, 58, 237, 0.15);
+    --color-glow-violet-strong: rgba(124, 58, 237, 0.22);
+    --color-glow-rose: rgba(236, 72, 153, 0.12);
+    --color-glow-rose-strong: rgba(236, 72, 153, 0.18);
+
+    /* Starfield Colors */
+    --color-star-white: #FFFFFF;
+    --color-star-cyan: #65D9FF;
+    --color-star-icy: #8BE9FD;
+    --color-star-violet: #A78BFA;
+
+    /* Glass Panel Effects */
+    --glass-bg: rgba(16, 24, 39, 0.7);
+    --glass-bg-strong: rgba(16, 24, 39, 0.85);
+    --glass-border: rgba(101, 217, 255, 0.1);
+    --glass-border-hover: rgba(101, 217, 255, 0.2);
+    --glass-shadow: 0 4px 24px rgba(3, 7, 18, 0.4), 0 0 0 1px rgba(101, 217, 255, 0.05);
+    --glass-shadow-hover: 0 8px 32px rgba(3, 7, 18, 0.5), 0 0 0 1px rgba(101, 217, 255, 0.12);
+
+    /* Typography */
+    --font-family-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-family-mono: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Consolas', monospace;
+
+    /* Font Sizes */
+    --text-xs: 0.75rem;      /* 12px */
+    --text-sm: 0.875rem;     /* 14px */
+    --text-base: 1rem;       /* 16px */
+    --text-lg: 1.125rem;     /* 18px */
+    --text-xl: 1.25rem;      /* 20px */
+    --text-2xl: 1.5rem;      /* 24px */
+    --text-3xl: 1.875rem;    /* 30px */
+    --text-4xl: 2.25rem;     /* 36px */
+
+    /* Font Weights */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Line Heights */
+    --leading-tight: 1.25;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.625;
+
+    /* Spacing Scale (4px base) */
+    --space-1: 0.25rem;   /* 4px */
+    --space-2: 0.5rem;    /* 8px */
+    --space-3: 0.75rem;   /* 12px */
+    --space-4: 1rem;      /* 16px */
+    --space-5: 1.25rem;   /* 20px */
+    --space-6: 1.5rem;    /* 24px */
+    --space-8: 2rem;      /* 32px */
+    --space-10: 2.5rem;   /* 40px */
+    --space-12: 3rem;     /* 48px */
+    --space-16: 4rem;     /* 64px */
+
+    /* Border Radius */
+    --radius-sm: 0.25rem;   /* 4px */
+    --radius-md: 0.375rem;  /* 6px */
+    --radius-lg: 0.5rem;    /* 8px */
+    --radius-xl: 0.75rem;   /* 12px */
+    --radius-2xl: 1rem;     /* 16px */
+    --radius-full: 9999px;
+
+    /* Shadows - Enhanced for space aesthetic */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.15);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.15);
+    --shadow-glow-cyan: 0 0 20px rgba(59, 130, 246, 0.25), 0 0 40px rgba(59, 130, 246, 0.1);
+    --shadow-glow-violet: 0 0 20px rgba(124, 58, 237, 0.2), 0 0 40px rgba(124, 58, 237, 0.08);
+
+    /* Focus Ring */
+    --focus-ring-width: 2px;
+    --focus-ring-color: #65D9FF;
+    --focus-ring-offset: 2px;
+
+    /* Transitions */
+    --transition-fast: 150ms ease;
+    --transition-normal: 200ms ease;
+    --transition-slow: 300ms ease;
+
+    /* Animation Timing */
+    --animation-twinkle-slow: 3000ms;
+    --animation-twinkle-normal: 2000ms;
+    --animation-twinkle-fast: 1200ms;
+    --animation-drift-slow: 12000ms;
+    --animation-drift-normal: 8000ms;
+    --animation-drift-fast: 5000ms;
+    --animation-pulse-slow: 4000ms;
+    --animation-pulse-normal: 3000ms;
+    --animation-pulse-fast: 2000ms;
+
+    /* Z-Index Scale */
+    --z-dropdown: 100;
+    --z-sticky: 200;
+    --z-fixed: 300;
+    --z-modal-backdrop: 400;
+    --z-modal: 500;
+    --z-popover: 600;
+    --z-tooltip: 700;
+    --z-space-bg: 0;
+    --z-space-content: 10;
+  }
+
+  /* Apply base styles using design tokens */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-family-sans);
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--leading-normal);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-primary);
+    min-height: 100vh;
+  }
+
+  /* Focus visible for accessibility */
+  *:focus-visible {
+    outline: none;
+    ring: var(--focus-ring-width) solid var(--focus-ring-color);
+    ring-offset: var(--focus-ring-offset);
+    ring-offset-color: var(--color-bg-primary);
+  }
+
+  /* Selection styles */
+  ::selection {
+    background-color: rgba(101, 217, 255, 0.3);
+    color: var(--color-text-primary);
+  }
+
+  /* Scrollbar styling */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border-default) transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--color-border-default);
+    border-radius: var(--radius-full);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-border-hover);
+  }
+}
+
+@layer components {
+  /* Reusable utility classes using design tokens */
+  .philos-container {
+    width: 100%;
+    max-width: 80rem; /* 1280px */
+    margin: 0 auto;
+    padding: 0 var(--space-4);
+  }
+
+  .pholis-card {
+    background-color: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .pholis-card-hover:hover {
+    border-color: var(--color-border-hover);
+    box-shadow: var(--shadow-md);
+  }
+
+  .pholis-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    font-family: var(--font-family-sans);
+    font-weight: var(--font-weight-medium);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+    cursor: pointer;
+    border: none;
+    white-space: nowrap;
+  }
+
+  .pholis-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .pholis-btn:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 var(--focus-ring-width) var(--focus-ring-color),
+      0 0 0 calc(var(--focus-ring-width) + 2px) var(--color-bg-primary);
+  }
+
+  .pholis-input {
+    width: 100%;
+    font-family: var(--font-family-sans);
+    font-size: var(--text-sm);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-md);
+    padding: var(--space-2) var(--space-3);
+    transition: all var(--transition-fast);
+  }
+
+  .pholis-input::placeholder {
+    color: var(--color-text-muted);
+  }
+
+  .pholis-input:focus {
+    outline: none;
+    border-color: var(--focus-ring-color);
+    box-shadow: 0 0 0 var(--focus-ring-width) var(--focus-ring-color);
+  }
+
+  .pholis-input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .pholis-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    font-size: var(--text-xs);
+    font-weight: var(--font-weight-medium);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-full);
+  }
+}
